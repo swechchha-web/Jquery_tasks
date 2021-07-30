@@ -1,0 +1,43 @@
+<html>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<style>
+  p{
+   height : 100px;
+   width : 100px;
+  display: inline-block;
+  margin : 5px;
+  border : 2px solid black;
+  }
+</style>
+<body>
+      <div>
+          <p id="text0">Text0</p>
+          <p>Text1</p>
+          <p>Text2</p>
+          <p id="text3">Text3</p>
+          <p>Text4</p>
+          <p>Text5</p>
+          <p id="text6">Text6</p>
+      </div>
+           <button id="btn">Click</button>
+
+</body>
+        <script>
+              $(document).ready(function(){
+                 $("#btn").click(function(){
+                    //$("#text3").siblings().css({"background":"yellow"});
+                    //$("#text3").prev().css({"background":"yellow"});
+                    //$("#text3").prevAll().css({"background":"yellow"});
+                    //$("#text3").prevUntil("#text0").css({"background":"yellow"});
+                    $("#text3").next().css({"background":"yellow"});
+                    //$("#text3").nextAll().css({"background":"yellow"});
+                    //$("#text3").nextUntil("#text6").css({"background":"yellow"});
+                 });
+             });
+       </script>
+</html>
+
+

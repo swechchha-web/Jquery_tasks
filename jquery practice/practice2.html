@@ -1,0 +1,27 @@
+<html>
+<script 
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<body>
+<div>
+  <p>Txt1</p>
+  <p class="mytext">Text2</p>
+   <p>Text3</p>
+  <p>Text4</p>
+</div>
+<button id="btn">Click</button>
+
+</body>
+<script>
+   $(document).ready(function(){
+      $("#btn").click(function(){
+        //$("p").first().css({"background":"yellow"});
+         //$("p").last().css({"background":"yellow"});
+        //$("p").eq(2).css({"background":"yellow"});
+        //$("p").filter(".mytext").css({"background":"yellow"});
+          $("p").not(".mytext").css({"background":"yellow"});
+      });
+ });
+</script>
+</html>

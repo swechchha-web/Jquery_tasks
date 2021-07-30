@@ -1,0 +1,48 @@
+<html>
+<script
+ src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+ 
+<style>
+       div{
+        padding : 20px;
+        }
+      .oparent{
+          border : 5px solid red;
+          position : relative;
+      }
+     .iparent{
+         border : 5px solid blue;
+     }
+  .parent{
+    border : 5px solid black;
+   }
+  #text{
+    border : 5px solid green;
+    text-align : center;
+    font-size : 30px;
+   }
+</style>
+<body>
+       <div class="oparent"> 
+             <div class="iparent">
+                   <div class="parent">
+                        <p id="text">Text</p>
+                   </div>
+            </div>
+     </div>
+<button id="btn">Click</button>
+</body>
+<script>
+        $(document).ready(function(){
+               $("#btn").click(function(){
+                      //$("#text").parent().css({"background":"red"})
+                      $("#text").parents().css({"background":"red"});
+                      //$("#text").parentsUntil(".oparent").css({"background":"red"});
+                      //$("#text").offsetParent(".oparent").css({"border-color":"green"});
+     
+                });
+        });
+</script>
+</html>

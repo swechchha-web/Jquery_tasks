@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		        crossorigin="anonymous"/>
+	    </script>
+	<style>
+*{
+margin : 0px;
+paddin : 0px;
+}
+   #parent{
+       margin :100px;
+       height : 200px;
+      width : 200px;
+border : 5px solid red;
+padding : 20px;
+position : relative;
+}
+#child{
+   height :200px;
+  width : 200px;
+ border : 5px solid black
+}
+</style>
+</head>
+<body>
+	<script>
+  $(document).ready(function(){
+
+  $("#btn").click(function(){
+     console.log($("#child").offset().left);
+     console.log($("#child").offset().top);
+     console.log($("#child").position());
+});
+});
+</script>
+	<div id="parent">
+		<div id="child"/>
+	</div>
+	<button id="btn">Click</button>
+</body>
+</html>

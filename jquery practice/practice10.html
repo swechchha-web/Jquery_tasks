@@ -1,0 +1,78 @@
+<html>
+</head>
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+<style>
+   *{
+    margin : 0;
+    padding : 0;
+    }
+ .menubar{
+     position : relative;
+   }
+   .menu{
+     border : 1px solid black;
+     text-align : center;
+     width : 60px;
+     background-color : teal;
+     color : yellow;
+     cursor : pointer;
+     position : absolute;
+     top : 0px;
+     left : 0px;
+     }
+  nav ul{
+     background-color : teal;
+     width : 20%;
+     height : 100vh; 
+     list-style-type : none;
+     position : relative;
+     top : 0px;
+     left : -20%;
+     transition :all 1s;
+    }
+  nav ul li a{ 
+     color : white;
+     display : block;
+     text-align : center;
+     text-decoration : none;
+     padding : 10px;
+    }
+  .close{
+     color : white;
+     position : absolute;
+     right : 5px;
+     cursor : pointer;
+     }
+
+</style>
+</head>
+<body>
+<div class="menubar">
+     <div class="menu">Menu</div>
+      <nav>
+            <ul> 
+                     <li class="close">X</li>
+                   <li><a href="#"> home</a></li>
+                     <li><a href="#"> About</a></li>
+                      <li><a href="#"> Contact</a></li>
+            </ul>
+     </nav>
+</div>
+</body>
+ <script>
+       $(document).ready(function(){
+          $(".menu").click(function(){
+              $(".menu").hide();
+              $("nav ul").css({"left":"0px"});
+          });
+          $(".close").click(function(){
+              $(".menu").show();
+              $("nav ul").css({"left":"-20%"});
+          });
+      });
+</script>
+</html>

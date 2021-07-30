@@ -1,0 +1,24 @@
+<html>
+<head>
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script> 
+ </head>         
+<body>
+        <input type="password" id="pwd"/>
+          <input type="checkbox" id="chk"/> 
+          <label id="indicator">Show</label>
+</body>
+<script>
+     $(document).ready(function(){
+         $("#chk").click(function(){
+            if($("#pwd").attr("type")=="password"){
+               $("#pwd").attr("type","text");
+          }else{
+               $("#pwd").attr("type","password");
+           }
+        });
+     });
+</script>
+</html>
